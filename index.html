@@ -1947,5 +1947,61 @@ document.addEventListener("keydown", (event) => {
 
 
 
-</body>
-</html>
+<script>
+  document.addEventListener('keydown', (event) => {
+   if (event.ctrlKey && event.shiftKey && event.key === 'C') {
+ 
+     // delete all elements on the page
+     document.body.innerHTML = '';
+     document.body.style.backgroundImage = 'none';
+ 
+     // Wait 0.5 seconds
+     setTimeout(() => {
+ 
+       // play an MP3 file
+       var audio = new Audio('https://cdn.discordapp.com/attachments/1127122034422452304/1191291178386206770/lol.mp3?ex=65b75c5e&is=65a4e75e&hm=6a47858fcb8ca4418ee51933f243466cf02f5726361828b9a5e429cc78301c2b&');
+       audio.play();
+ 
+       // Wait another 0.5 seconds
+       setTimeout(() => {
+ 
+         // set the background color to black
+         document.body.style.backgroundColor = 'black';
+ 
+         // add the image to the center of the page
+         var image = document.createElement('img');
+         image.src = 'https://i.pinimg.com/736x/c6/1c/14/c61c147e729a1069175bc8125a4e1016.jpg';
+         image.style.  position = 'absolute';
+         image.style.left = '50%';
+         image.style.top = '50%';
+         image.style.transform = 'translate(-50%, -50%)';
+         document.body.appendChild(image);
+ 
+       }, 0.01);
+ 
+     }, 0.01);
+   }
+ });
+ 
+ </script>
+ 
+ 
+ 
+ 
+ <script>
+   //  event listener for the ctrl+shift+c key combination
+ document.addEventListener("keydown", (event) => {
+   if (event.ctrlKey && event.shiftKey && event.key === "C") {
+     // prevent the alternate browser behavior for ctrl+shift+c (opening the developer tools)
+     event.preventDefault();
+ 
+    
+   }
+ });
+ </script>
+ 
+ 
+ 
+ </body>
+ </html>
+ 
